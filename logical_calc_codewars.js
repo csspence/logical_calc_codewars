@@ -38,6 +38,17 @@ Output:
 calculated boolean
 */
 
-function logicalCalc(array, op){
-  //your code here
+const logicalCalc = (array, op) => {
+  for(let i = 0; i < array.length - 1; i++) {
+    if(op === "AND" && array[i] + op + array[i+1] === true) {
+      continue;
+    } else if (op === "XOR" && (array[i] + op + array[i+1]) === true) {
+
+    }
+    else {
+      return false;
+    }
+  }
+
+  return true;
 }
